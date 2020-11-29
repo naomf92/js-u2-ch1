@@ -15,4 +15,3 @@ function addRandomNum() {
 
 function recordNumber() {
 }
-recordNumber();
