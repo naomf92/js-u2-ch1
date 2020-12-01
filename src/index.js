@@ -1,7 +1,7 @@
 import _ from 'lodash';
 
 function addRandomNum() {
-  const mainEl = document.getElementById('main');
+  //const mainEl = document.getElementById('main');
   let p = document.createElement('p')
   p.innerHTML = "Random Number: " + _.random(0, 10).toString();
   document.body.appendChild(p)
@@ -14,4 +14,12 @@ function addRandomNum() {
 }
 
 function recordNumber() {
+  let p = document.createElement('p')
+  p.innerHTML = "sum: " + _.sum([]).toString();
+  document.body.appendChild(p)
+}
+
+{
+  const button2 = document.getElementById('button2')
+  button2.addEventListener("click", recordNumber);
 }
