@@ -14,8 +14,11 @@ function addRandomNum() {
 }
 
 function recordNumber() {
+  let arr = [];
+  arr.push(addRandomNum());
+
   let p = document.createElement('p')
-  p.innerHTML = "sum: " + _.sum([]).toString();
+  p.innerHTML = "sum: " + _.sum(arr).toString();
   document.body.appendChild(p)
 }
 
