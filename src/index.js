@@ -15,9 +15,11 @@ function addRandomNum() {
 
 function recordNumber() {
   let arr = [];
+  // ↓ この実装は合計の計算の機能ではないので、関数addRandomNumで行うのが良さそうです
   arr.push(addRandomNum());
 
   let p = document.createElement('p')
+  // _.sum()の記述は、以下に1行にまとめると読みづらいので、可読性を上げるため、定数に入れると良さそうです
   p.innerHTML = "sum: " + _.sum(arr).toString();
   document.body.appendChild(p)
 }
