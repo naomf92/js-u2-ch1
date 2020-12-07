@@ -16,14 +16,14 @@ function addRandomNum() {
 }
 
 function recordNumber() {
+  // ↓ 変数arrのスコープ場所を考えると良さそうです
   let arr = [];
-  // ↓ この実装は合計の計算の機能ではないので、関数addRandomNumで行うのが良さそうです
-  //arr.push(addRandomNum());
 
   let p = document.createElement('p')
 
-  // _.sum()の記述は、以下に1行にまとめると読みづらいので、可読性を上げるため、定数に入れると良さそうです
-  //p.innerHTML = "sum: " + _.sum(arr).toString();
+  // 今回の場合はどちらでも問題ないですが、_.sum()の記述だけ定数に入れておくと、再利用性が高いかもしれません
+  // const sum = _.sum(arr);
+  // p.innerHTML = 'Sum: ' + sum.toString();
 
   const html =_.sum(arr).toString();
   p.innerHTML = "sum: " + html;
