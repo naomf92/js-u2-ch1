@@ -1,12 +1,14 @@
 import _ from 'lodash';
 
+let arr = [];
+
 function addRandomNum() {
   //const mainEl = document.getElementById('main');
+  const randomNum = _.random(0, 10);
   let p = document.createElement('p')
-  p.innerHTML = "Random Number: " + _.random(0, 10).toString();
+  p.innerHTML = "Random Number: " + randomNum.toString();
   document.body.appendChild(p)
-
-  arr.push(addRandomNum());
+  arr.push(randomNum);
 }
 
 {
@@ -16,18 +18,11 @@ function addRandomNum() {
 }
 
 function recordNumber() {
-  let arr = [];
-  // ↓ この実装は合計の計算の機能ではないので、関数addRandomNumで行うのが良さそうです
-  //arr.push(addRandomNum());
-
   let p = document.createElement('p')
-
-  // _.sum()の記述は、以下に1行にまとめると読みづらいので、可読性を上げるため、定数に入れると良さそうです
-  //p.innerHTML = "sum: " + _.sum(arr).toString();
-
-  const html =_.sum(arr).toString();
-  p.innerHTML = "sum: " + html;
+  const sum =_.sum(arr);
+  p.innerHTML = "sum: " + sum.toString();
   document.body.appendChild(p)
+  console.log(arr);
 }
 
 {
