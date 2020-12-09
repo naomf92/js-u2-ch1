@@ -3,12 +3,15 @@ import _ from 'lodash';
 let arr = [];
 
 function addRandomNum() {
-  //const mainEl = document.getElementById('main');
   const randomNum = _.random(0, 10);
   let p = document.createElement('p')
   p.innerHTML = "Random Number: " + randomNum.toString();
   document.body.appendChild(p)
-  arr.push(randomNum);
+  arr.length = 4;
+  arr.unshift(randomNum);
+  if (arr.length < 4) {
+    arr.shift(randomNum);
+  }
 }
 
 {
